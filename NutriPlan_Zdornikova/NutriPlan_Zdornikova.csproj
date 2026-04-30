@@ -41,7 +41,7 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -83,6 +83,12 @@
     <Compile Include="AppForms\RegistratuonForm.Designer.cs">
       <DependentUpon>RegistratuonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ActivityLevel.cs" />
     <Compile Include="Models\dishes.cs" />
     <Compile Include="Models\FoodLogs.cs" />
@@ -96,10 +102,10 @@
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\ViewDishes.cs" />
     <Compile Include="Models\WeightHistory.cs" />
-    <Compile Include="NutriPlan_ZdornikovaDataSet1.Designer.cs">
+    <Compile Include="NutriPlan_ZdornikovaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NutriPlan_ZdornikovaDataSet1.xsd</DependentUpon>
+      <DependentUpon>NutriPlan_ZdornikovaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +118,9 @@
     <EmbeddedResource Include="AppForms\RegistratuonForm.resx">
       <DependentUpon>RegistratuonForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,16 +131,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="NutriPlan_ZdornikovaDataSet1.xsc">
-      <DependentUpon>NutriPlan_ZdornikovaDataSet1.xsd</DependentUpon>
+    <None Include="NutriPlan_ZdornikovaDataSet.xsc">
+      <DependentUpon>NutriPlan_ZdornikovaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="NutriPlan_ZdornikovaDataSet1.xsd">
+    <None Include="NutriPlan_ZdornikovaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NutriPlan_ZdornikovaDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>NutriPlan_ZdornikovaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NutriPlan_ZdornikovaDataSet1.xss">
-      <DependentUpon>NutriPlan_ZdornikovaDataSet1.xsd</DependentUpon>
+    <None Include="NutriPlan_ZdornikovaDataSet.xss">
+      <DependentUpon>NutriPlan_ZdornikovaDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,6 +161,39 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="docss\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\гиря.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\вода.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\яблоко.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\гантеля.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4277132.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

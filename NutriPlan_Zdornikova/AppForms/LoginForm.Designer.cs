@@ -33,21 +33,23 @@
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label passwordHashLabel;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PictureBoxEye = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ButtonRegistration = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nutriPlan_ZdornikovaDataSet = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1();
+            this.nutriPlan_ZdornikovaDataSet = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordHashTextBox = new System.Windows.Forms.TextBox();
             this.timerwriterTimer = new System.Windows.Forms.Timer(this.components);
-            this.usersTableAdapter = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.UsersTableAdapter();
-            this.tableAdapterManager = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager();
+            this.usersTableAdapter = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.UsersTableAdapter();
+            this.tableAdapterManager = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager();
             fullNameLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             passwordHashLabel = new System.Windows.Forms.Label();
@@ -56,6 +58,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).BeginInit();
             this.SuspendLayout();
@@ -101,16 +104,17 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.splitContainer1.Panel1.Controls.Add(this.guna2Button2);
             this.splitContainer1.Panel1.Controls.Add(this.labelWelcome);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.guna2PictureBox);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.splitContainer1.Panel2.Controls.Add(this.PictureBoxEye);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.ButtonRegistration);
             this.splitContainer1.Panel2.Controls.Add(this.ButtonLogin);
@@ -123,6 +127,27 @@
             this.splitContainer1.Size = new System.Drawing.Size(305, 466);
             this.splitContainer1.SplitterDistance = 101;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AnimatedGIF = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Candara Light", 12F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Location = new System.Drawing.Point(222, 3);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(80, 28);
+            this.guna2Button2.TabIndex = 7;
+            this.guna2Button2.Text = "Выход";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // labelWelcome
             // 
@@ -145,7 +170,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Регистрация ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -157,7 +181,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "NutriPlan";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2PictureBox
             // 
@@ -170,6 +193,19 @@
             this.guna2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox.TabIndex = 0;
             this.guna2PictureBox.TabStop = false;
+            // 
+            // PictureBoxEye
+            // 
+            this.PictureBoxEye.BorderRadius = 5;
+            this.PictureBoxEye.Image = global::NutriPlan_Zdornikova.Properties.Resources.images;
+            this.PictureBoxEye.ImageRotate = 0F;
+            this.PictureBoxEye.Location = new System.Drawing.Point(255, 184);
+            this.PictureBoxEye.Name = "PictureBoxEye";
+            this.PictureBoxEye.Size = new System.Drawing.Size(23, 20);
+            this.PictureBoxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBoxEye.TabIndex = 7;
+            this.PictureBoxEye.TabStop = false;
+            this.PictureBoxEye.Click += new System.EventHandler(this.PictureBoxEye_Click);
             // 
             // label3
             // 
@@ -257,6 +293,7 @@
             this.passwordHashTextBox.Name = "passwordHashTextBox";
             this.passwordHashTextBox.Size = new System.Drawing.Size(201, 20);
             this.passwordHashTextBox.TabIndex = 3;
+            this.passwordHashTextBox.UseSystemPasswordChar = true;
             // 
             // timerwriterTimer
             // 
@@ -276,7 +313,7 @@
             this.tableAdapterManager.GoalTableAdapter = null;
             this.tableAdapterManager.RoleTableAdapter = null;
             this.tableAdapterManager.TypesMealTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserProfilesTableAdapter = null;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             this.tableAdapterManager.ViewDishesTableAdapter = null;
@@ -301,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -313,10 +351,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private NutriPlan_ZdornikovaDataSet1 nutriPlan_ZdornikovaDataSet;
+        private NutriPlan_ZdornikovaDataSet nutriPlan_ZdornikovaDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private NutriPlan_ZdornikovaDataSet1TableAdapters.UsersTableAdapter usersTableAdapter;
-        private NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private NutriPlan_ZdornikovaDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox passwordHashTextBox;
@@ -325,5 +363,7 @@
         private Guna.UI2.WinForms.Guna2Button ButtonLogin;
         private Guna.UI2.WinForms.Guna2Button ButtonRegistration;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxEye;
     }
 }

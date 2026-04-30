@@ -19,6 +19,7 @@ namespace NutriPlan_Zdornikova
         {
             public static Users CurrentUser { get; set; }
         }
+  
         public static NutriPlanDB context = new NutriPlanDB();
         [STAThread]
         

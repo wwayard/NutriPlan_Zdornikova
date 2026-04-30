@@ -11,28 +11,30 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static NutriPlan_Zdornikova.Program;
+using System.Data.Entity;
 
 namespace NutriPlan_Zdornikova.AppForms
 {
     public partial class FormAnketa : Form
     {
         int SelectedGenderId = 0;
-        public FormAnketa()
+        private int _currentUserId;
+        public FormAnketa(int UserId)
         {
             InitializeComponent();
-            labelUser.Text = $"Приветствую, {Session.CurrentUser.FullName}! Пожалуйста, заполните анкету для получения персонального плана питания.";
+            //labelUser.Text = $"Приветствую, {Session.CurrentUser.FullName}! Пожалуйста, заполните анкету для получения персонального плана питания.";
             labelUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             labelUser.AutoSize = false;
             labelUser.Size = new Size(400, 50);
-        }
-
-      
-
-
-        private void FormAnketa_Load(object sender, EventArgs e)
-        {
+            Panel1IMT.ShadowDepth = 5;
+            Panel1IMT.Padding = new Padding(10);
+            _currentUserId = UserId;
 
         }
+
+       
+
+
 
         private void FormAnketa_Load_1(object sender, EventArgs e)
         {
@@ -67,10 +69,7 @@ namespace NutriPlan_Zdornikova.AppForms
             ProgressBar1.Value = 33;
         }
 
-        private void ProgressBar1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void ButtonNext2_Click(object sender, EventArgs e)
         {
@@ -144,52 +143,98 @@ namespace NutriPlan_Zdornikova.AppForms
 
         private void CalulateResults()
         {
+            int goalId = Convert.ToInt32(GoalComboBox1.SelectedValue);
             int calories = (int)CaloriesTrackBar1.Value;
-            double weight = (double)TrackBarWeight.Value; // берем из поля на 2-м или 3-м шаге
+            string mainAdvice = "";
+            int activityId = Convert.ToInt32(ActivityLevelComboBox2.SelectedValue);
+            double weight = (double)TrackBarWeight.Value;
+            double heightMeters = (double)TrackBarHeigh.Value / 100.0; // переводим см в метры для ИМТ
+            int calories1 = (int)CaloriesTrackBar1.Value;
 
-            // Расчет БЖУ (30/30/40)
-            double p = (calories * 0.30) / 4;
-            double f = (calories * 0.30) / 9;
-            double c = (calories * 0.40) / 4;
-
-            // Расчет воды (30 мл на 1 кг веса)
-            double water = weight * 0.03;
-
-            // Выводим БЖУ красиво
-            labelBjuRes.Text = $"БЕЛКИ: {Math.Round(p)}г  |  ЖИРЫ: {Math.Round(f)}г  |  УГЛЕВОДЫ: {Math.Round(c)}г";
-
-            // Выводим норму воды
-            labelWaterNorm.Text = $"Ваша суточная норма воды: {Math.Round(water, 1)} л.";
-
-            // Генерация текстового совета в зависимости от цели (из Step 2)
-            int goalId = (int)GoalComboBox1.SelectedValue;
-            string advice = "";
-
-            switch (goalId)
+            // 2. Расчет ИМТ
+            double imt = weight / (heightMeters * heightMeters);
+            labelIMTStatus.Text = Math.Round(imt, 1).ToString();
+            if (imt < 18.5)
             {
-                case 1: advice = "Цель — Похудение: Старайтесь не превышать норму углеводов и делайте упор на овощи."; break;
-                case 2: advice = "Цель — Баланс: Ваше питание сбалансировано. Поддерживайте текущую активность."; break;
-                case 3: advice = "Цель — Набор: Уделите внимание белкам и сложным углеводам перед тренировкой."; break;
+                labelStatus.Text = "Дефицит веса";
+                labelStatus.ForeColor = Color.Blue;
+            }
+            else if (imt < 25)
+            {
+                labelStatus.Text = "Норма";
+                labelStatus.ForeColor = Color.Green;
+            }
+            else
+            {
+                labelStatus.Text = "Избыточный вес";
+                labelStatus.ForeColor = Color.Orange;
+            }
+            double waterNorm = weight * 0.035;
+            labelLitr.Text = $"{Math.Round(waterNorm, 1)} л";
+            string waterAdvice = "";
+            if (activityId >= 3) // Если выбрана высокая или экстремальная активность
+            {
+                // Спортсменам нужно больше воды
+                waterNorm += 0.5;
+                waterAdvice = "Т.к. вы активно тренируетесь, ваша норма увеличена на 500 мл для компенсации потери влаги.";
+            }
+            else if (activityId == 1) // Сидячий образ жизни
+            {
+                waterAdvice = "При сидячей работе важно пить воду равномерно, чтобы избежать отеков и сонливости.";
+            }
+            else
+            {
+                waterAdvice = "Начинайте день со стакана воды. Это поможет вашему организму проснуться и включить метаболизм.";
             }
 
-            labelMainAdvace.Text = advice;
+           
+            labelAdvance.Text = waterAdvice;
+
+
+           
+            double p = (calories * 0.3) / 4;
+            double f = (calories * 0.3) / 9;
+            double c = (calories * 0.4) / 4;
+
+            labelBelki.Text = $"{Math.Round(p)}г";
+            labelFat.Text = $"{Math.Round(f)}г";
+           labelcarbs.Text = $"{Math.Round(c)}г";
+
+            ProgressBarBelki.Value = 30;
+            ProgressBarFat.Value = 30;
+            ProgressBarYgli.Value = 40;
+            if (goalId == 1) // Снижение веса
+            {
+                if (calories < 1500)
+                    mainAdvice = "Внимание: Вы выбрали очень низкий калораж. Старайтесь не придерживаться его дольше 2 недель, чтобы не замедлить метаболизм. Сделайте упор на белок!";
+                else
+                    mainAdvice =  "Отличный выбор для плавного похудения. Главное — стабильность. Старайтесь заменять быстрые углеводы (сладкое) на сложные (крупы).";
+            }
+            else if (goalId == 3) // Набор массы
+            {
+                mainAdvice = "Для роста мышц важен профицит. Если вес «стоит», добавьте в рацион полезные жиры (орехи, масла). И не забывайте про силовые тренировки!";
+            }
+            else // Поддержание / Баланс
+            {
+                mainAdvice = "Ваша стратегия — долголетие. Разнообразьте рацион овощами разных цветов и следите за качеством сна, чтобы энергия была на высоте.";
+            }
+
+            labelSovet.Text = mainAdvice;
         }
         
         private void ButtonNext3_Click(object sender, EventArgs e)
         {
-            panel3Step.Visible = false;
-            panel4Step.Visible = true;
-
-            panel4Step.BringToFront();
-            ProgressBar1.Value = 100;
             CalulateResults();
 
+            // 2. Скрываем предыдущую панель
+            panel3Step.Visible = false;
+            ProgressBar1.Value = 100;
+            // 3. Запускаем красивое появление финальной панели
+            // guna2Transition1 — имя компонента, который ты перетащила на форму
+            guna2Transition1.ShowSync(panel4Step);
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void ButtonFinish_Click(object sender, EventArgs e)
         {
@@ -197,58 +242,55 @@ namespace NutriPlan_Zdornikova.AppForms
             {
                 using (var context = new NutriPlanDB())
                 {
-                    // 1. Создаем объект анкеты
-                    var newAnketa = new UserProfiles
+                    var profile = context.UserProfiles.Find(_currentUserId);
+
+                    if (profile == null)
                     {
-                        // Данные пользователя (ID берем из глобальной сессии, которую делали при входе)
-                        UserId = Session.CurrentUser.Id,
-
-                        // Данные с 1-й панели
-                        IdGender = SelectedGenderId, // Наша переменная из кнопок М/Ж
-                        DateOfBirthday = dateOfBirthdayDateTimePicker.Value,
-
-                        // Данные со 2-й панели (из ComboBox)
-                        idGoal = (int)GoalComboBox1.SelectedValue,
-                        IdActivityLevel = (int)ActivityLevelComboBox2.SelectedValue,
-
-                        // Данные с 3-й панели (из TrackBar или Numeric)
-                        weightCM = (int)TrackBarWeight.Value,
-                        heightCM = (int)TrackBarHeigh.Value,
-                        DailyCalories = (int)CaloriesTrackBar1.Value,
-
-                        Updatet_at = DateTime.Now
-                    };
-
-                    // 2. Добавляем в контекст и сохраняем
-                    context.UserProfiles.Add(newAnketa);
-                    if (SelectedGenderId == 0)
-                    {
-                        MessageBox.Show("Пожалуйста, выберите ваш пол на первом шаге анкеты!");
-                        return;
+                        profile = new UserProfiles
+                        {
+                            UserId = _currentUserId
+                        };
+                        context.UserProfiles.Add(profile);
                     }
-                    if (Session.CurrentUser == null || Session.CurrentUser.Id == 0)
-                    {
-                        MessageBox.Show("Ошибка: Пользователь не авторизован! ID равен 0.");
-                        return; // Не даем базе выкинуть ошибку
-                    }
+
+                    // Заполняем данные
+                    profile.IdGender = SelectedGenderId;
+                    profile.DateOfBirthday = DateTimePickerOfBirdthay.Value;
+
+                    if (GoalComboBox1.SelectedValue != null)
+                        profile.idGoal = (int)GoalComboBox1.SelectedValue;
+
+                    if (ActivityLevelComboBox2.SelectedValue != null)
+                        profile.IdActivityLevel = (int)ActivityLevelComboBox2.SelectedValue;
+
+                    profile.weightCM = (int)TrackBarWeight.Value;
+                    profile.heightCM = (int)TrackBarHeigh.Value;
+                    profile.DailyCalories = (int)CaloriesTrackBar1.Value;
+                    profile.Updatet_at = DateTime.Now;
+
                     context.SaveChanges();
 
-                    // 3. Уведомление и переход
-                    MessageBox.Show("Данные успешно сохранены! Ваш персональный план питания готов.",
-                                    "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Анкета успешно сохранена!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Открываем главную форму приложения
-                    //FormMain mainForm = new FormMain();
-                    //mainForm.Show();
+                    // --- ОТКРЫВАЕМ ГЛАВНУЮ ФОРМУ ---
 
-                    // Закрываем анкету
+                    // 1. Обновляем данные в сессии, чтобы в главной форме были актуальные данные
+                    Session.CurrentUser = context.Users
+                        .Include(u => u.UserProfiles)
+                        .FirstOrDefault(u => u.Id == _currentUserId);
+
+                    // 2. Создаем и показываем главную форму
+                    MainForm mainForm = new MainForm();
+                    mainForm.Show();
+
+                    // 3. Закрываем форму анкеты
                     this.Close();
                 }
             }
             catch (Exception ex)
             {
-                // Если что-то пошло не так (например, БД недоступна)
-                MessageBox.Show(ex.InnerException?.InnerException?.Message ?? ex.Message);
+                string errorMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                MessageBox.Show("Ошибка сохранения: " + errorMsg);
             }
         }
 

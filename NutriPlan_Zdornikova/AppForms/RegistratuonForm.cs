@@ -121,7 +121,7 @@ namespace NutriPlan_Zdornikova.AppForms
                 MessageBox.Show("Ошибка: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            FormAnketa formAnketa = new FormAnketa();
+            FormAnketa formAnketa = new FormAnketa(Session.CurrentUser.Id);
             formAnketa.Show();
         }
 
@@ -131,6 +131,28 @@ namespace NutriPlan_Zdornikova.AppForms
             loginForm.Owner = this; // Указываем, что эта форма — "владелец"
             loginForm.Show();
             this.Hide();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PictureBoxEye_Click(object sender, EventArgs e)
+        {
+            passwordHashTextBox.UseSystemPasswordChar = !passwordHashTextBox.UseSystemPasswordChar;
+
+            // 2. Меняем картинку на кнопке
+            if (passwordHashTextBox.UseSystemPasswordChar)
+            {
+                // Пароль скрыт — ставим закрытый глаз
+                PictureBoxEye.Image = Properties.Resources.images;
+            }
+            else
+            {
+                // Пароль виден — ставим открытый глаз
+                PictureBoxEye.Image = Properties.Resources.images__1_;
+            }
         }
     }
 }

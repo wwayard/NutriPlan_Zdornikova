@@ -32,30 +32,33 @@
             System.Windows.Forms.Label fullNameLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label passwordHashLabel;
-            this.guna2PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timerwriterTimer = new System.Windows.Forms.Timer(this.components);
             this.ButtonRegistration = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nutriPlan_ZdornikovaDataSet = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordHashTextBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nutriPlan_ZdornikovaDataSet = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1();
-            this.tableAdapterManager = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager();
-            this.usersTableAdapter = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.UsersTableAdapter();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.tableAdapterManager = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager();
+            this.usersTableAdapter = new NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.UsersTableAdapter();
+            this.guna2PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PictureBoxEye = new Guna.UI2.WinForms.Guna2PictureBox();
             fullNameLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             passwordHashLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEye)).BeginInit();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -87,18 +90,6 @@
             passwordHashLabel.Size = new System.Drawing.Size(122, 19);
             passwordHashLabel.TabIndex = 4;
             passwordHashLabel.Text = "Введите пароль:";
-            // 
-            // guna2PictureBox
-            // 
-            this.guna2PictureBox.BorderRadius = 20;
-            this.guna2PictureBox.Image = global::NutriPlan_Zdornikova.Properties.Resources.free_icon_logo_187869;
-            this.guna2PictureBox.ImageRotate = 0F;
-            this.guna2PictureBox.Location = new System.Drawing.Point(12, 12);
-            this.guna2PictureBox.Name = "guna2PictureBox";
-            this.guna2PictureBox.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox.TabIndex = 0;
-            this.guna2PictureBox.TabStop = false;
             // 
             // ButtonRegistration
             // 
@@ -140,6 +131,16 @@
             this.fullNameTextBox.Size = new System.Drawing.Size(201, 20);
             this.fullNameTextBox.TabIndex = 1;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.nutriPlan_ZdornikovaDataSet;
+            // 
+            // nutriPlan_ZdornikovaDataSet
+            // 
+            this.nutriPlan_ZdornikovaDataSet.DataSetName = "NutriPlan_ZdornikovaDataSet";
+            this.nutriPlan_ZdornikovaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "email", true));
@@ -155,6 +156,7 @@
             this.passwordHashTextBox.Name = "passwordHashTextBox";
             this.passwordHashTextBox.Size = new System.Drawing.Size(201, 20);
             this.passwordHashTextBox.TabIndex = 3;
+            this.passwordHashTextBox.UseSystemPasswordChar = true;
             // 
             // splitContainer1
             // 
@@ -166,6 +168,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.splitContainer1.Panel1.Controls.Add(this.guna2Button2);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.guna2PictureBox);
@@ -175,6 +178,7 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.splitContainer1.Panel2.Controls.Add(this.PictureBoxEye);
             this.splitContainer1.Panel2.Controls.Add(this.guna2Button1);
             this.splitContainer1.Panel2.Controls.Add(this.ButtonRegistration);
             this.splitContainer1.Panel2.Controls.Add(fullNameLabel);
@@ -184,8 +188,29 @@
             this.splitContainer1.Panel2.Controls.Add(passwordHashLabel);
             this.splitContainer1.Panel2.Controls.Add(this.passwordHashTextBox);
             this.splitContainer1.Size = new System.Drawing.Size(305, 466);
-            this.splitContainer1.SplitterDistance = 101;
+            this.splitContainer1.SplitterDistance = 95;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AnimatedGIF = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Candara Light", 12F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Location = new System.Drawing.Point(222, 3);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(80, 28);
+            this.guna2Button2.TabIndex = 6;
+            this.guna2Button2.Text = "Выход";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // label1
             // 
@@ -197,36 +222,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "NutriPlan";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.nutriPlan_ZdornikovaDataSet;
-            // 
-            // nutriPlan_ZdornikovaDataSet
-            // 
-            this.nutriPlan_ZdornikovaDataSet.DataSetName = "NutriPlan_ZdornikovaDataSet";
-            this.nutriPlan_ZdornikovaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ActivityLevelTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.dishesTableAdapter = null;
-            this.tableAdapterManager.FoodLogsTableAdapter = null;
-            this.tableAdapterManager.GenderTableAdapter = null;
-            this.tableAdapterManager.GoalTableAdapter = null;
-            this.tableAdapterManager.RoleTableAdapter = null;
-            this.tableAdapterManager.TypesMealTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UserProfilesTableAdapter = null;
-            this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
-            this.tableAdapterManager.ViewDishesTableAdapter = null;
-            this.tableAdapterManager.WeightHistoryTableAdapter = null;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // guna2Button1
             // 
@@ -249,6 +244,51 @@
             this.guna2Button1.Text = "Назад";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ActivityLevelTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.dishesTableAdapter = null;
+            this.tableAdapterManager.FoodLogsTableAdapter = null;
+            this.tableAdapterManager.GenderTableAdapter = null;
+            this.tableAdapterManager.GoalTableAdapter = null;
+            this.tableAdapterManager.RoleTableAdapter = null;
+            this.tableAdapterManager.TypesMealTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserProfilesTableAdapter = null;
+            this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.ViewDishesTableAdapter = null;
+            this.tableAdapterManager.WeightHistoryTableAdapter = null;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // guna2PictureBox
+            // 
+            this.guna2PictureBox.BorderRadius = 20;
+            this.guna2PictureBox.Image = global::NutriPlan_Zdornikova.Properties.Resources.free_icon_logo_187869;
+            this.guna2PictureBox.ImageRotate = 0F;
+            this.guna2PictureBox.Location = new System.Drawing.Point(12, 12);
+            this.guna2PictureBox.Name = "guna2PictureBox";
+            this.guna2PictureBox.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox.TabIndex = 0;
+            this.guna2PictureBox.TabStop = false;
+            // 
+            // PictureBoxEye
+            // 
+            this.PictureBoxEye.BorderRadius = 5;
+            this.PictureBoxEye.Image = global::NutriPlan_Zdornikova.Properties.Resources.images;
+            this.PictureBoxEye.ImageRotate = 0F;
+            this.PictureBoxEye.Location = new System.Drawing.Point(252, 184);
+            this.PictureBoxEye.Name = "PictureBoxEye";
+            this.PictureBoxEye.Size = new System.Drawing.Size(23, 20);
+            this.PictureBoxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBoxEye.TabIndex = 6;
+            this.PictureBoxEye.TabStop = false;
+            this.PictureBoxEye.Click += new System.EventHandler(this.PictureBoxEye_Click);
+            // 
             // RegistratuonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,24 +300,25 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.RegistratuonForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutriPlan_ZdornikovaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEye)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private NutriPlan_ZdornikovaDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private NutriPlan_ZdornikovaDataSet1TableAdapters.UsersTableAdapter usersTableAdapter;
-        private NutriPlan_ZdornikovaDataSet1 nutriPlan_ZdornikovaDataSet;
+        private NutriPlan_ZdornikovaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private NutriPlan_ZdornikovaDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private NutriPlan_ZdornikovaDataSet nutriPlan_ZdornikovaDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox;
         private System.Windows.Forms.Timer timerwriterTimer;
@@ -289,5 +330,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxEye;
     }
 }

@@ -20,9 +20,9 @@ namespace NutriPlan_Zdornikova {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("NutriPlan_ZdornikovaDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("NutriPlan_ZdornikovaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class NutriPlan_ZdornikovaDataSet1 : global::System.Data.DataSet {
+    public partial class NutriPlan_ZdornikovaDataSet : global::System.Data.DataSet {
         
         private ActivityLevelDataTable tableActivityLevel;
         
@@ -72,7 +72,7 @@ namespace NutriPlan_Zdornikova {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public NutriPlan_ZdornikovaDataSet1() {
+        public NutriPlan_ZdornikovaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -83,7 +83,7 @@ namespace NutriPlan_Zdornikova {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected NutriPlan_ZdornikovaDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected NutriPlan_ZdornikovaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -299,7 +299,7 @@ namespace NutriPlan_Zdornikova {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            NutriPlan_ZdornikovaDataSet1 cln = ((NutriPlan_ZdornikovaDataSet1)(base.Clone()));
+            NutriPlan_ZdornikovaDataSet cln = ((NutriPlan_ZdornikovaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -472,9 +472,9 @@ namespace NutriPlan_Zdornikova {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "NutriPlan_ZdornikovaDataSet1";
+            this.DataSetName = "NutriPlan_ZdornikovaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/NutriPlan_ZdornikovaDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/NutriPlan_ZdornikovaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableActivityLevel = new ActivityLevelDataTable();
@@ -622,7 +622,7 @@ namespace NutriPlan_Zdornikova {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+            NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -933,7 +933,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1317,7 +1317,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1674,7 +1674,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1952,7 +1952,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2230,7 +2230,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2508,7 +2508,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2786,7 +2786,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2869,6 +2869,8 @@ namespace NutriPlan_Zdornikova {
             private global::System.Data.DataColumn columnidGoal;
             
             private global::System.Data.DataColumn columnIdActivityLevel;
+            
+            private global::System.Data.DataColumn columnphoto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
@@ -2977,6 +2979,14 @@ namespace NutriPlan_Zdornikova {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public global::System.Data.DataColumn photoColumn {
+                get {
+                    return this.columnphoto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3012,7 +3022,7 @@ namespace NutriPlan_Zdornikova {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public UserProfilesRow AddUserProfilesRow(UsersRow parentUsersRowByFK_UserProfiles_Users, System.DateTime DateOfBirthday, int heightCM, double weightCM, int DailyCalories, System.DateTime Updatet_at, GenderRow parentGenderRowByFK_UserProfiles_Gender, GoalRow parentGoalRowByFK_UserProfiles_Goal, ActivityLevelRow parentActivityLevelRowByFK_UserProfiles_ActivityLevel) {
+            public UserProfilesRow AddUserProfilesRow(UsersRow parentUsersRowByFK_UserProfiles_Users, System.DateTime DateOfBirthday, int heightCM, double weightCM, int DailyCalories, System.DateTime Updatet_at, GenderRow parentGenderRowByFK_UserProfiles_Gender, GoalRow parentGoalRowByFK_UserProfiles_Goal, ActivityLevelRow parentActivityLevelRowByFK_UserProfiles_ActivityLevel, byte[] photo) {
                 UserProfilesRow rowUserProfilesRow = ((UserProfilesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3023,7 +3033,8 @@ namespace NutriPlan_Zdornikova {
                         Updatet_at,
                         null,
                         null,
-                        null};
+                        null,
+                        photo};
                 if ((parentUsersRowByFK_UserProfiles_Users != null)) {
                     columnValuesArray[0] = parentUsersRowByFK_UserProfiles_Users[0];
                 }
@@ -3074,6 +3085,7 @@ namespace NutriPlan_Zdornikova {
                 this.columnIdGender = base.Columns["IdGender"];
                 this.columnidGoal = base.Columns["idGoal"];
                 this.columnIdActivityLevel = base.Columns["IdActivityLevel"];
+                this.columnphoto = base.Columns["photo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3097,6 +3109,8 @@ namespace NutriPlan_Zdornikova {
                 base.Columns.Add(this.columnidGoal);
                 this.columnIdActivityLevel = new global::System.Data.DataColumn("IdActivityLevel", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdActivityLevel);
+                this.columnphoto = new global::System.Data.DataColumn("photo", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnphoto);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserId}, true));
                 this.columnUserId.AllowDBNull = false;
@@ -3176,7 +3190,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3534,7 +3548,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3808,7 +3822,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4114,7 +4128,7 @@ namespace NutriPlan_Zdornikova {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NutriPlan_ZdornikovaDataSet1 ds = new NutriPlan_ZdornikovaDataSet1();
+                NutriPlan_ZdornikovaDataSet ds = new NutriPlan_ZdornikovaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4828,6 +4842,22 @@ namespace NutriPlan_Zdornikova {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public byte[] photo {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableUserProfiles.photoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'photo\' в таблице \'UserProfiles\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserProfiles.photoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public ActivityLevelRow ActivityLevelRow {
                 get {
                     return ((ActivityLevelRow)(this.GetParentRow(this.Table.ParentRelations["FK_UserProfiles_ActivityLevel"])));
@@ -4868,6 +4898,18 @@ namespace NutriPlan_Zdornikova {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_UserProfiles_Users"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsphotoNull() {
+                return this.IsNull(this.tableUserProfiles.photoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetphotoNull() {
+                this[this.tableUserProfiles.photoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5511,7 +5553,7 @@ namespace NutriPlan_Zdornikova {
         }
     }
 }
-namespace NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSet1TableAdapters {
+namespace NutriPlan_Zdornikova.NutriPlan_ZdornikovaDataSetTableAdapters {
     
     
     /// <summary>
@@ -5689,7 +5731,7 @@ SELECT idActivity, nameActivity, PAL FROM ActivityLevel WHERE (idActivity = @idA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.ActivityLevelDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.ActivityLevelDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5702,9 +5744,9 @@ SELECT idActivity, nameActivity, PAL FROM ActivityLevel WHERE (idActivity = @idA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.ActivityLevelDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.ActivityLevelDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.ActivityLevelDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.ActivityLevelDataTable();
+            NutriPlan_ZdornikovaDataSet.ActivityLevelDataTable dataTable = new NutriPlan_ZdornikovaDataSet.ActivityLevelDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5712,14 +5754,14 @@ SELECT idActivity, nameActivity, PAL FROM ActivityLevel WHERE (idActivity = @idA
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.ActivityLevelDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.ActivityLevelDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "ActivityLevel");
         }
         
@@ -6048,7 +6090,7 @@ SELECT Id, name, CaloriesPer100G, ProteinPer100G, FatPer100G, CarbsPer100G, IsAc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.dishesDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.dishesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6061,9 +6103,9 @@ SELECT Id, name, CaloriesPer100G, ProteinPer100G, FatPer100G, CarbsPer100G, IsAc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.dishesDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.dishesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.dishesDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.dishesDataTable();
+            NutriPlan_ZdornikovaDataSet.dishesDataTable dataTable = new NutriPlan_ZdornikovaDataSet.dishesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6071,14 +6113,14 @@ SELECT Id, name, CaloriesPer100G, ProteinPer100G, FatPer100G, CarbsPer100G, IsAc
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.dishesDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.dishesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "dishes");
         }
         
@@ -6479,7 +6521,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.FoodLogsDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.FoodLogsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6492,9 +6534,9 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.FoodLogsDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.FoodLogsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.FoodLogsDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.FoodLogsDataTable();
+            NutriPlan_ZdornikovaDataSet.FoodLogsDataTable dataTable = new NutriPlan_ZdornikovaDataSet.FoodLogsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6502,14 +6544,14 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.FoodLogsDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.FoodLogsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FoodLogs");
         }
         
@@ -6798,7 +6840,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.GenderDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.GenderDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6811,9 +6853,9 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.GenderDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.GenderDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.GenderDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.GenderDataTable();
+            NutriPlan_ZdornikovaDataSet.GenderDataTable dataTable = new NutriPlan_ZdornikovaDataSet.GenderDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6821,14 +6863,14 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.GenderDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.GenderDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Gender");
         }
         
@@ -7116,7 +7158,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.GoalDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.GoalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7129,9 +7171,9 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.GoalDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.GoalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.GoalDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.GoalDataTable();
+            NutriPlan_ZdornikovaDataSet.GoalDataTable dataTable = new NutriPlan_ZdornikovaDataSet.GoalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7139,14 +7181,14 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.GoalDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.GoalDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Goal");
         }
         
@@ -7434,7 +7476,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.RoleDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7447,9 +7489,9 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.RoleDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.RoleDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.RoleDataTable();
+            NutriPlan_ZdornikovaDataSet.RoleDataTable dataTable = new NutriPlan_ZdornikovaDataSet.RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7457,14 +7499,14 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.RoleDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Role");
         }
         
@@ -7752,7 +7794,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.TypesMealDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.TypesMealDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7765,9 +7807,9 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.TypesMealDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.TypesMealDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.TypesMealDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.TypesMealDataTable();
+            NutriPlan_ZdornikovaDataSet.TypesMealDataTable dataTable = new NutriPlan_ZdornikovaDataSet.TypesMealDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7775,14 +7817,14 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.TypesMealDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.TypesMealDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "TypesMeal");
         }
         
@@ -8030,6 +8072,7 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
             tableMapping.ColumnMappings.Add("IdGender", "IdGender");
             tableMapping.ColumnMappings.Add("idGoal", "idGoal");
             tableMapping.ColumnMappings.Add("IdActivityLevel", "IdActivityLevel");
+            tableMapping.ColumnMappings.Add("photo", "photo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -8046,8 +8089,8 @@ SELECT Id, userId, DishId, IdMealType, WeightGrams, LogDate, CreatedAt FROM Food
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdActivityLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdActivityLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[UserProfiles] ([UserId], [DateOfBirthday], [heightCM], [weightCM], [DailyCalories], [Updatet_at], [IdGender], [idGoal], [IdActivityLevel]) VALUES (@UserId, @DateOfBirthday, @heightCM, @weightCM, @DailyCalories, @Updatet_at, @IdGender, @idGoal, @IdActivityLevel);
-SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel FROM UserProfiles WHERE (UserId = @UserId)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[UserProfiles] ([UserId], [DateOfBirthday], [heightCM], [weightCM], [DailyCalories], [Updatet_at], [IdGender], [idGoal], [IdActivityLevel], [photo]) VALUES (@UserId, @DateOfBirthday, @heightCM, @weightCM, @DailyCalories, @Updatet_at, @IdGender, @idGoal, @IdActivityLevel, @photo);
+SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel, photo FROM UserProfiles WHERE (UserId = @UserId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirthday", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8058,10 +8101,11 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdGender", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdGender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idGoal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idGoal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdActivityLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdActivityLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[UserProfiles] SET [UserId] = @UserId, [DateOfBirthday] = @DateOfBirthday, [heightCM] = @heightCM, [weightCM] = @weightCM, [DailyCalories] = @DailyCalories, [Updatet_at] = @Updatet_at, [IdGender] = @IdGender, [idGoal] = @idGoal, [IdActivityLevel] = @IdActivityLevel WHERE (([UserId] = @Original_UserId) AND ([DateOfBirthday] = @Original_DateOfBirthday) AND ([heightCM] = @Original_heightCM) AND ([weightCM] = @Original_weightCM) AND ([DailyCalories] = @Original_DailyCalories) AND ([Updatet_at] = @Original_Updatet_at) AND ([IdGender] = @Original_IdGender) AND ([idGoal] = @Original_idGoal) AND ([IdActivityLevel] = @Original_IdActivityLevel));
-SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel FROM UserProfiles WHERE (UserId = @UserId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[UserProfiles] SET [UserId] = @UserId, [DateOfBirthday] = @DateOfBirthday, [heightCM] = @heightCM, [weightCM] = @weightCM, [DailyCalories] = @DailyCalories, [Updatet_at] = @Updatet_at, [IdGender] = @IdGender, [idGoal] = @idGoal, [IdActivityLevel] = @IdActivityLevel, [photo] = @photo WHERE (([UserId] = @Original_UserId) AND ([DateOfBirthday] = @Original_DateOfBirthday) AND ([heightCM] = @Original_heightCM) AND ([weightCM] = @Original_weightCM) AND ([DailyCalories] = @Original_DailyCalories) AND ([Updatet_at] = @Original_Updatet_at) AND ([IdGender] = @Original_IdGender) AND ([idGoal] = @Original_idGoal) AND ([IdActivityLevel] = @Original_IdActivityLevel));
+SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel, photo FROM UserProfiles WHERE (UserId = @UserId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirthday", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8072,6 +8116,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdGender", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdGender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idGoal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idGoal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdActivityLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdActivityLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfBirthday", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_heightCM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "heightCM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8097,7 +8142,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdG" +
-                "ender, idGoal, IdActivityLevel FROM dbo.UserProfiles";
+                "ender, idGoal, IdActivityLevel, photo FROM dbo.UserProfiles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8105,7 +8150,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.UserProfilesDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.UserProfilesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8118,9 +8163,9 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.UserProfilesDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.UserProfilesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.UserProfilesDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.UserProfilesDataTable();
+            NutriPlan_ZdornikovaDataSet.UserProfilesDataTable dataTable = new NutriPlan_ZdornikovaDataSet.UserProfilesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8128,14 +8173,14 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.UserProfilesDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.UserProfilesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "UserProfiles");
         }
         
@@ -8188,7 +8233,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int UserId, System.DateTime DateOfBirthday, int heightCM, double weightCM, int DailyCalories, System.DateTime Updatet_at, int IdGender, int idGoal, int IdActivityLevel) {
+        public virtual int Insert(int UserId, System.DateTime DateOfBirthday, int heightCM, double weightCM, int DailyCalories, System.DateTime Updatet_at, int IdGender, int idGoal, int IdActivityLevel, byte[] photo) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(UserId));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DateOfBirthday));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(heightCM));
@@ -8198,6 +8243,12 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
             this.Adapter.InsertCommand.Parameters[6].Value = ((int)(IdGender));
             this.Adapter.InsertCommand.Parameters[7].Value = ((int)(idGoal));
             this.Adapter.InsertCommand.Parameters[8].Value = ((int)(IdActivityLevel));
+            if ((photo == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((byte[])(photo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8228,6 +8279,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
                     int IdGender, 
                     int idGoal, 
                     int IdActivityLevel, 
+                    byte[] photo, 
                     int Original_UserId, 
                     System.DateTime Original_DateOfBirthday, 
                     int Original_heightCM, 
@@ -8246,15 +8298,21 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(IdGender));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(idGoal));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(IdActivityLevel));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_UserId));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_DateOfBirthday));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_heightCM));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Original_weightCM));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_DailyCalories));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Updatet_at));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_IdGender));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_idGoal));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_IdActivityLevel));
+            if ((photo == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((byte[])(photo));
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_UserId));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_DateOfBirthday));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_heightCM));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(Original_weightCM));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_DailyCalories));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_Updatet_at));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_IdGender));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_idGoal));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_IdActivityLevel));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8284,6 +8342,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
                     int IdGender, 
                     int idGoal, 
                     int IdActivityLevel, 
+                    byte[] photo, 
                     int Original_UserId, 
                     System.DateTime Original_DateOfBirthday, 
                     int Original_heightCM, 
@@ -8293,7 +8352,7 @@ SELECT UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, Id
                     int Original_IdGender, 
                     int Original_idGoal, 
                     int Original_IdActivityLevel) {
-            return this.Update(Original_UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel, Original_UserId, Original_DateOfBirthday, Original_heightCM, Original_weightCM, Original_DailyCalories, Original_Updatet_at, Original_IdGender, Original_idGoal, Original_IdActivityLevel);
+            return this.Update(Original_UserId, DateOfBirthday, heightCM, weightCM, DailyCalories, Updatet_at, IdGender, idGoal, IdActivityLevel, photo, Original_UserId, Original_DateOfBirthday, Original_heightCM, Original_weightCM, Original_DailyCalories, Original_Updatet_at, Original_IdGender, Original_idGoal, Original_IdActivityLevel);
         }
     }
     
@@ -8491,7 +8550,7 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.UsersDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8504,9 +8563,9 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.UsersDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.UsersDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.UsersDataTable();
+            NutriPlan_ZdornikovaDataSet.UsersDataTable dataTable = new NutriPlan_ZdornikovaDataSet.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8514,14 +8573,14 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.UsersDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Users");
         }
         
@@ -8870,7 +8929,7 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.ViewDishesDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.ViewDishesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8883,9 +8942,9 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.ViewDishesDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.ViewDishesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.ViewDishesDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.ViewDishesDataTable();
+            NutriPlan_ZdornikovaDataSet.ViewDishesDataTable dataTable = new NutriPlan_ZdornikovaDataSet.ViewDishesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8893,14 +8952,14 @@ SELECT Id, FullName, email, PasswordHash, is_active, created_at, IdRole FROM Use
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.ViewDishesDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.ViewDishesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "ViewDishes");
         }
         
@@ -9201,7 +9260,7 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NutriPlan_ZdornikovaDataSet1.WeightHistoryDataTable dataTable) {
+        public virtual int Fill(NutriPlan_ZdornikovaDataSet.WeightHistoryDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9214,9 +9273,9 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NutriPlan_ZdornikovaDataSet1.WeightHistoryDataTable GetData() {
+        public virtual NutriPlan_ZdornikovaDataSet.WeightHistoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NutriPlan_ZdornikovaDataSet1.WeightHistoryDataTable dataTable = new NutriPlan_ZdornikovaDataSet1.WeightHistoryDataTable();
+            NutriPlan_ZdornikovaDataSet.WeightHistoryDataTable dataTable = new NutriPlan_ZdornikovaDataSet.WeightHistoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9224,14 +9283,14 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1.WeightHistoryDataTable dataTable) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet.WeightHistoryDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int Update(NutriPlan_ZdornikovaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "WeightHistory");
         }
         
@@ -9659,7 +9718,7 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateUpdatedRows(NutriPlan_ZdornikovaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(NutriPlan_ZdornikovaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -9768,7 +9827,7 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateInsertedRows(NutriPlan_ZdornikovaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(NutriPlan_ZdornikovaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -9866,7 +9925,7 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateDeletedRows(NutriPlan_ZdornikovaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(NutriPlan_ZdornikovaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._weightHistoryTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.WeightHistory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -9988,7 +10047,7 @@ SELECT idWeight, UserId, WeghtKg, RecordDate FROM WeightHistory WHERE (idWeight 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public virtual int UpdateAll(NutriPlan_ZdornikovaDataSet1 dataSet) {
+        public virtual int UpdateAll(NutriPlan_ZdornikovaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
